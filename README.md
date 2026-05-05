@@ -1,3 +1,5 @@
+# ⚠️ ARCHIVED — See ARCHIVED.md for context.
+
 # TradeLine 24/7 - Enterprise AI Receptionist Platform
 
 **Transform Your Business Communications with 24/7 AI-Powered Receptionist Services**

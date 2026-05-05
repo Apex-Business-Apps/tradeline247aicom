@@ -1,0 +1,11 @@
+Service | File | Env Var | Status | Action Required
+---|---|---|---|---
+Twilio | supabase/functions/_shared/twilio_client.ts | TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN | Cancel Subscription | Remove active keys, deactivate inbound numbers, remove webhooks from Twilio console
+Twilio | supabase/functions/_shared/twilioValidator.ts | TWILIO_AUTH_TOKEN | Cancel Subscription | Stop validating requests
+Twilio | supabase/functions/voice-action/index.ts | None | Remove Webhook | Delete webhook mapping for status callbacks
+Twilio | supabase/functions/onboarding-provision/index.ts | TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN | Active Provisioning | Deactivate automated Twilio subaccount provisioning
+Twilio | scripts/test-twilio-webhooks.mjs | TWILIO_AUTH_TOKEN | Testing | None (local test)
+ElevenLabs | src/services/voiceService.ts | ELEVENLABS_API_KEY / ELEVEN_LABS_API_KEY | Cancel Subscription | Remove active API keys
+OpenAI | supabase/functions/_shared/agentFactory.ts | OPENAI_API_KEY | Usage-Based Billing | Deactivate active keys to stop processing call agent logic
+OpenAI | supabase/functions/visual-risk-analyzer/index.ts | OPENAI_API_KEY | Usage-Based Billing | Deactivate active keys
+Stripe | supabase/functions/stripe-webhook/index.ts | STRIPE_SECRET_KEY / STRIPE_WEBHOOK_SECRET | Active Endpoint | Remove webhook endpoints in Stripe console, cancel any live subscriptions
