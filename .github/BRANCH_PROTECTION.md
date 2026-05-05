@@ -197,7 +197,7 @@ After enabling security scans, rotate the following:
 1. **Supabase Service Role Key**
    - Rotate immediately after enabling CodeQL
    - Update GitHub Secret: `SUPABASE_SERVICE_ROLE_KEY`
-   - Update in Vercel/deployment platform
+   - Update in Cloudflare Pages/deployment platform
 
 2. **Twilio Auth Token**
    - Rotate quarterly or after any security scan alerts

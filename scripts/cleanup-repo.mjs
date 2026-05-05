@@ -43,7 +43,7 @@ const TEMP_FILES = [
 // Documentation categories for organization
 const DOC_CATEGORIES = {
   'audit': ['AUDIT', 'COMPREHENSIVE_AUDIT', 'AUDIT_COMPLETE'],
-  'ci-cd': ['CI_', 'DEVOPS_', 'DEPLOYMENT_', 'VERCEL_', 'GITHUB_'],
+  'ci-cd': ['CI_', 'DEVOPS_', 'DEPLOYMENT_', 'CLOUDFLARE_', 'GITHUB_'],
   'security': ['SECURITY_', 'ENCRYPTION_', 'PII_', 'PROFILES_SECURITY', 'CONTACTS_SECURITY', 'APPOINTMENT_SECURITY'],
   'production': ['PRODUCTION_', 'ENTERPRISE_', 'LAUNCH_', 'INVESTOR_'],
   'features': ['HERO_', 'HEADER_', 'NAVIGATION_', 'DASHBOARD_', 'CHATBOX_', 'LIGHTHOUSE_'],

@@ -45,7 +45,7 @@ VITE_APP_URL=https://www.tradeline247ai.com
 
 These MUST ONLY exist in:
 - GitHub Secrets (for CI/CD)
-- Vercel/deployment platform environment variables
+- Cloudflare Pages/deployment platform environment variables
 - Local `.env.local` (gitignored)
 
 ```bash
@@ -203,12 +203,12 @@ Rotate immediately if:
 # 2. Update GitHub Secrets
 gh secret set SUPABASE_SERVICE_ROLE_KEY < new-key.txt
 
-# 3. Update Vercel
-vercel env rm SUPABASE_SERVICE_ROLE_KEY production
-vercel env add SUPABASE_SERVICE_ROLE_KEY production < new-key.txt
+# 3. Update Cloudflare Pages
+wrangler secret delete SUPABASE_SERVICE_ROLE_KEY --name tradeline247
+wrangler secret put SUPABASE_SERVICE_ROLE_KEY --name tradeline247 < new-key.txt
 
 # 4. Redeploy
-vercel --prod
+wrangler pages deploy dist --project-name tradeline247
 
 # 5. Verify all functions work
 npm run test:integration
@@ -429,7 +429,7 @@ Secrets hygiene is properly maintained when:
 
 1. ✅ Zero secrets in git history
 2. ✅ Zero secrets in client bundle (dist/)
-3. ✅ All server secrets in GitHub Secrets/Vercel
+3. ✅ All server secrets in GitHub Secrets/Cloudflare Pages
 4. ✅ .env.local is gitignored
 5. ✅ .env.example has no real values
 6. ✅ Automated scans pass on every PR

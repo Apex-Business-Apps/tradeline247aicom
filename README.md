@@ -84,6 +84,7 @@ TradeLine 24/7 revolutionizes business communications with an enterprise-grade A
 
 - Web deployment is Cloudflare Pages only (Vercel workflow/config removed).
 - Repository intentionally contains no git submodules to keep Cloudflare clone/build stable.
+- If `tradeline247ai.com` shows "This deployment is temporarily paused" with HTTP 402, DNS is still pointing to Vercel and must be switched to Cloudflare Pages.
 
 ## 🚀 Quick Start
 
