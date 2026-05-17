@@ -98,7 +98,7 @@ jobs:
       
       - name: Comment PR with audit results
         if: github.event_name == 'pull_request'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const fs = require('fs');
@@ -113,7 +113,7 @@ jobs:
 
       - name: Report status (security/npm-audit)
         if: always() && github.event_name != 'schedule'
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const state = "${{ job.status }}" === "success" ? "success" : "failure";
